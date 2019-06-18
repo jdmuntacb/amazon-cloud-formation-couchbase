@@ -172,7 +172,7 @@
                 "[ $username ] && { echo wget ${url} --user=${username} --password=${password} > /tmp/run; } || { echo wget ${url} > /tmp/run; } \n",
                 "chmod 777 /tmp/run \n",
                 "bash /tmp/run > /tmp/output\n",
-                "rpm --install couchbase-server-enterprise-${version}-centos6.x86_64.rpm\n",
+                "rpm --install `ls -1rt couchbase-server-* |tail -1`\n",
 
                 "#######################################################\n",
                 "############ Turn Off Transparent Hugepages ###########\n",
